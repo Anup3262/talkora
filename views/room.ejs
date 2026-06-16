@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Talkora Room</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <h2>Talkora Room</h2>
+    <a href="/dashboard">Dashboard</a>
+  </nav>
+
+  <div class="room-container">
+    <h3>Room ID: <%= roomId %></h3>
+
+    <div class="video-grid">
+      <video id="localVideo" autoplay muted playsinline></video>
+      <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+
+<div class="chat-box">
+    <div id="messages"></div>
+
+    <input
+      type="text"
+      id="messageInput"
+      placeholder="Type message..."
+    >
+
+    <button onclick="sendMessage()">
+        Send
+    </button>
+</div>
+
+    <div class="controls">
+    <button onclick="toggleMic()">🎤 Mic</button>
+    <button onclick="toggleCamera()">📹 Camera</button>
+    <button onclick="copyRoomId()">📋 Copy Room ID</button>
+    <button onclick="window.location='/dashboard'">
+        🚪 Leave Meeting
+    </button>
+</div>
+  </div>
+
+  <script>
+    const ROOM_ID = "<%= roomId %>";
+    const USER_ID = "<%= user.id %>";
+  </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/room.js"></script>
+</body>
+</html>

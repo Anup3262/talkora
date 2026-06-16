@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
+  color: #111827;
+}
+
+nav {
+  height: 70px;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+nav h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background: #2563eb;
+  padding: 10px 18px;
+  border-radius: 999px;
+}
+
+.auth-box {
+  width: 390px;
+  margin: 80px auto;
+  padding: 35px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.auth-box h1 {
+  color: #2563eb;
+  font-size: 38px;
+  margin-bottom: 5px;
+}
+
+.auth-box h2 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.18);
+}
+
+button {
+  width: 100%;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(37,99,235,0.35);
+}
+
+.error {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.container {
+  width: 88%;
+  max-width: 1100px;
+  margin: 35px auto;
+}
+
+.container h1 {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.95);
+  padding: 26px;
+  margin: 22px 0;
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+.history {
+  border-top: 1px solid #e5e7eb;
+  padding: 16px 0;
+}
+
+.history a {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.room-container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.room-container h3 {
+  color: white;
+  background: rgba(255,255,255,0.16);
+  padding: 14px;
+  border-radius: 14px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+video {
+  width: 100%;
+  height: 380px;
+  background: #000;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  border: 2px solid rgba(255,255,255,0.18);
+}
+
+.controls {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  width: auto;
+  min-width: 150px;
+}
+
+@media (max-width: 768px) {
+  .auth-box {
+    width: 90%;
+  }
+
+  nav {
+    padding: 0 18px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  video {
+    height: 280px;
+  }
+
+  .chat-box{
+    background:white;
+    margin-top:20px;
+    padding:20px;
+    border-radius:15px;
+}
+
+#messages{
+    height:200px;
+    overflow-y:auto;
+}
+
+}

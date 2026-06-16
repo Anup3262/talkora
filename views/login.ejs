@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Talkora Login</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="auth-box">
+   <h1>🎥 Talkora</h1>
+<p>Real-Time Video Conferencing Platform</p>
+<h2>Welcome Back</h2>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <form action="/login" method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>New user? <a href="/register">Register</a></p>
+  </div>
+</body>
+</html>
